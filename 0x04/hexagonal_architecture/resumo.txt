@@ -1,0 +1,22 @@
+Arquitetura Hexagonal: Uma abordagem centrada na aplicação
+A Arquitetura Hexagonal, também conhecida como Ports and Adapters, foi criada por Alistair Cockburn com o objetivo de tornar sistemas de software mais flexíveis, testáveis e independentes de tecnologias externas. Essa arquitetura propõe uma separação clara entre o núcleo da aplicação — onde reside a lógica de negócio — e os mecanismos externos que interagem com ela, como bancos de dados, interfaces gráficas, APIs ou sistemas de terceiros.
+
+Benefícios e recursos
+Entre os principais benefícios da Arquitetura Hexagonal estão:
+- Isolamento da lógica de negócio: O núcleo da aplicação não depende de frameworks, bibliotecas ou tecnologias externas, o que facilita testes e manutenção.
+- Facilidade de substituição de componentes: Como os adaptadores externos se comunicam com a aplicação por meio de portas (interfaces), é possível trocar tecnologias sem afetar o funcionamento interno.
+- Alta testabilidade: A independência entre camadas permite testes unitários e de integração mais precisos e confiáveis.
+- Organização clara: O modelo hexagonal favorece uma estrutura de código mais compreensível e modular.
+
+Diferenças em relação à Clean Architecture
+Embora compartilhem princípios como a inversão de dependência e a separação de responsabilidades, a Arquitetura Hexagonal e a Clean Architecture apresentam diferenças sutis:
+- Organização visual: A Hexagonal é representada por um hexágono com portas e adaptadores em suas bordas, enquanto a Clean Architecture é geralmente ilustrada em camadas concêntricas.
+- Foco na interação: A Hexagonal enfatiza os pontos de entrada e saída da aplicação (ports), enquanto a Clean Architecture foca na hierarquia de dependências entre entidades, casos de uso e interfaces.
+- Flexibilidade de comunicação: A Hexagonal permite múltiplos adaptadores para uma mesma porta, facilitando a integração com diferentes canais (ex.: REST, CLI, eventos).
+
+Aplicabilidade e considerações
+Na minha opinião, a Arquitetura Hexagonal pode ser aplicada a diversos tipos de projetos, especialmente aqueles que exigem alta manutenibilidade, testes robustos e integração com múltiplos sistemas. No entanto, antes de adotá-la, é importante considerar:
+- Complexidade do domínio: Projetos simples podem não justificar a sobrecarga estrutural.
+- Equipe e cultura técnica: É essencial que os desenvolvedores compreendam bem os conceitos de inversão de dependência e design orientado a interfaces.
+- Necessidade de evolução tecnológica: Se o sistema precisa trocar tecnologias com frequência, a Hexagonal oferece vantagens significativas.
+Em suma, a Arquitetura Hexagonal é uma poderosa aliada na construção de sistemas resilientes e adaptáveis, promovendo uma abordagem centrada na lógica de negócio e na independência tecnológica.
